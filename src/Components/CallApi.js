@@ -12,6 +12,14 @@ export default class CallApi extends React.Component {
   }
 
   componentDidMount() {
+    // Fetch
+    /*fetch("https://pokeapi.co/api/v2/pokemon/geodude")
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ pokemon: [...this.state.pokemon, data] });
+      });*/
+
+    // Axios
     axios.get("https://pokeapi.co/api/v2/pokemon/geodude").then((data) => {
       console.log(data);
       const unpackedData = data.data;
